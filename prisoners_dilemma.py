@@ -42,7 +42,7 @@ import team10, team11, team12, team13, team14
 betray = example1
 collude = example0
 
-modules = [example0, example1, example2, example3, 
+modules = [team9, example0, example1, example2, example3, 
 team0, team1, team2, team3, team4, team5, team6, team7, team8, team9, example4, example5, example6, example7,team10,
 team11, team12, team13, team14]
 for module in modules:
@@ -379,5 +379,5 @@ def post_to_file(string, filename='tournament.txt', directory=''):
  
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
-    scores, moves, reports = main_play([team0, team14, team9])   
+    scores, moves, reports = main_play(modules[0:4])   
     section0, section1, section2, section3 = reports

@@ -28,12 +28,11 @@ def move(my_history, their_history, my_score, their_score):
     
     if len(my_history)==0: # It's the first round: collude
        return 'c'
-    else:
-        recent_round_them=their_history[-3]
-        if 'b' in their_history[-3:]<0.66: # If the other player has betrayed within last 2/3 rounds, 
+ #       recent_round_them=their_history[-3]
+    elif their_history[-3] =='b' or their_history[-2] == 'b' or their_history[-1] == 'b': # If the other player has betrayed within last 2/3 rounds, 
             return 'b'               # Betray.
-        else:
-            return 'c'         
+    else:
+        return 'c'         
     
     
 def test_move(my_history, their_history, my_score, their_score, result):
